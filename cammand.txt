@@ -1,0 +1,24 @@
+Step 1: Force Virtual Environment with 3.11
+py -3.11 -m venv dbt-env
+Step 2: Activate Environment
+.\dbt-env\Scripts\activate
+Step 3: Verify the Correct Engine
+python --version
+Step 4: Install dbt-athena adapter -> 
+pip install dbt-snowflake
+step 5 dbt init market_basket_dbt
+
+
+market_basket_dbt
+dbt run --select fct_weekly_pair_habits
+dbt run --select dim_demographics
+dbt run --select dim_products
+dbt run --select fct_customer_habits
+dbt run --select fct_discount_impact
+dbt run --select fct_directional_pull
+dbt run --select stg_demographics
+dbt run --select fct_market_basket_demographics
+dbt run --select fct_market_basket_pairs
+dbt run --select fct_basket_anchors
+dbt run --select stg_transaction
+dbt run --select stg_products

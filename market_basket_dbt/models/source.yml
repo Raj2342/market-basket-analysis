@@ -1,0 +1,54 @@
+version: 2
+
+sources:
+  - name: market_basket_raw
+    database: market_basket_db
+    schema: raw_data
+    description: "Raw Market Basket dataset containing household demographics, product metadata, and retail transactions."
+    tables:
+      - name: raw_hh_demographic
+        description: "Demographic information for a subset of households."
+        columns:
+          - name: household_key
+            description: "Primary key linking to transaction data."
+            tests:
+              - unique
+              - not_null
+          - name: age_desc
+          - name: marital_status_code
+          - name: income_desc
+          - name: homeowner_desc
+          - name: hh_comp_desc
+          - name: kids_count
+
+      - name: raw_product
+        description: "Product metadata including brand, department, and commodity descriptions."
+        columns:
+          - name: product_id
+            description: "Primary key for products."
+            tests:
+              - unique
+              - not_null
+          - name: department
+          - name: brand
+          - name: commodity_desc
+          - name: sub_commodity_desc
+          - name: manufacturer
+
+      - name: raw_transaction_data
+        description: "Line-item basket transactions mapping products to households over time."
+        columns:
+          - name: basket_id
+            description: "Identifier for an individual shopping trip."
+          - name: household_key
+            description: "Foreign key referencing raw_hh_demographic."
+            tests:
+              - not_null
+          - name: product_id
+            description: "Foreign key referencing raw_product."
+            tests:
+              - not_null
+          - name: quantity
+          - name: sales_value
+          - name: week_no
+          - name: day
