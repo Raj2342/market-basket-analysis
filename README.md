@@ -8,15 +8,22 @@
 
 *An independent enterprise-architecture case study demonstrating full-cycle ELT workflows, complex SQL association rules, and modern data stack implementation.*
 
-## 🎯 The Business Problem
-For major grocery delivery platforms, maximizing revenue relies heavily on increasing the Average Order Value (AOV) of existing users rather than solely acquiring new ones[cite: 2]. However, forcing random product recommendations creates friction, and poorly structured promotions often result in a "Discount Trap," where customers only purchase marked-down items without adding full-priced goods to their carts[cite: 2]. 
+## 🎯 The Business Problem: The Instacart Case Study
 
-This project engineers a data-driven cross-selling analytical engine designed to solve these exact margin and revenue challenges. The core objectives of this architecture are to:
-*   **Identify "Anchor" Products:** Pinpoint the high-volume staple items that drive total cart volume to optimize top-of-funnel marketing discounts[cite: 2].
-*   **Map Association Rules:** Calculate the top 50 "Frequently Bought Together" pairs to fuel dynamic UI/UX recommendations[cite: 2].
-*   **Determine Directional Pull:** Calculate conditional probabilities to establish "Lead" vs. "Follow" items within a pair, ensuring discounts are applied to the Lead item to organically drive the sale of both[cite: 2].
-*   **Drive "Subscribe & Save" Subscriptions:** Differentiate between one-off "Impulse Buys" and "Habitual Reorders" to identify exactly which product pairs should be aggressively pushed into recurring subscription models[cite: 2].
-*   **Demographic Bundling:** Segment basket combinations by household demographics (e.g., High-Income vs. Budget Shoppers) to design highly targeted promotional bundles[cite: 2].
+Instacart is a leading grocery delivery platform with a primary objective: maximize revenue. However, sustainable revenue growth cannot rely solely on the expensive acquisition of new users. The most effective strategy is to increase the amount each existing customer spends per checkout—a metric known as Average Order Value (AOV).
+
+But increasing cart size cannot be forced. If a customer adds 'Bread' to their cart and the app randomly recommends 'Shampoo', the customer will simply ignore it. It creates a frustrating user experience. 
+
+**The Objective:** 
+How can Instacart organically increase its Average Order Value without relying on new customer acquisition?
+
+**The Solution (The Cross-Sell Engine):**
+This project engineers a Market Basket Analysis engine to discover exactly which products are organically purchased together. For example, if the data reveals that 75% of users who buy "Organic Strawberries" also buy "Almond Milk," this pipeline identifies that relationship so the company can deploy the right recommendation at the exact right time.
+
+**Real-World Business Impact:**
+*   **"Frequently Bought Together" UI Feature:** By mapping item associations, the app can trigger high-conversion pop-ups. If a user adds 'Tortilla Chips' to their cart, the app instantly suggests 'Salsa Dip'. The user adds it to their cart effortlessly, generating instant profit.
+*   **Smart Bundling & Promotional Offers:** This engine equips the marketing team with data-backed combinations to run highly profitable weekend combo sales (e.g., 'Organic Milk' & 'Bananas') rather than guessing which products pair well.
+*   **App UI Optimization:** Insights from this analysis allow the product team to restructure the app's digital aisles, grouping highly correlated product categories together to smooth the customer journey and encourage broader catalogue browsing.
 
 ---
 <!-- (Steps 3, 4, 5, and 6 will go here: ELT Architecture, SQL Logic Snippets, Dashboard Screenshots, and Business Impact) -->
