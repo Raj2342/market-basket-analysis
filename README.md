@@ -17,7 +17,7 @@ But increasing cart size cannot be forced. If a customer adds 'Bread' to their c
 **The Objective:** 
 How can Instacart organically increase its Average Order Value without relying on new customer acquisition?
 
-The Solution (Data-Driven Association Rules):
+**The Solution (Data-Driven Association Rules):**
 This project executes a comprehensive Market Basket Analysis to discover exactly which products are organically purchased together. Instead of relying on guesswork, this analytical framework uses advanced SQL to extract hard patterns from millions of rows. For example, if the data reveals that 75% of users who buy "Organic Strawberries" also buy "Almond Milk," this analysis provides the exact business rules needed by the product and marketing teams to deploy targeted, frictionless recommendations
 
 **Real-World Business Impact:**
