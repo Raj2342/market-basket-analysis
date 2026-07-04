@@ -17,8 +17,8 @@ But increasing cart size cannot be forced. If a customer adds 'Bread' to their c
 **The Objective:** 
 How can Instacart organically increase its Average Order Value without relying on new customer acquisition?
 
-**The Solution (The Cross-Sell Engine):**
-This project engineers a Market Basket Analysis engine to discover exactly which products are organically purchased together. For example, if the data reveals that 75% of users who buy "Organic Strawberries" also buy "Almond Milk," this pipeline identifies that relationship so the company can deploy the right recommendation at the exact right time.
+The Solution (Data-Driven Association Rules):
+This project executes a comprehensive Market Basket Analysis to discover exactly which products are organically purchased together. Instead of relying on guesswork, this analytical framework uses advanced SQL to extract hard patterns from millions of rows. For example, if the data reveals that 75% of users who buy "Organic Strawberries" also buy "Almond Milk," this analysis provides the exact business rules needed by the product and marketing teams to deploy targeted, frictionless recommendations
 
 **Real-World Business Impact:**
 *   **"Frequently Bought Together" UI Feature:** By mapping item associations, the app can trigger high-conversion pop-ups. If a user adds 'Tortilla Chips' to their cart, the app instantly suggests 'Salsa Dip'. The user adds it to their cart effortlessly, generating instant profit.
