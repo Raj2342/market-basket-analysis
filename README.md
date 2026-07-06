@@ -18,7 +18,7 @@ But increasing cart size cannot be forced. If a customer adds 'Bread' to their c
 How can Instacart organically increase its Average Order Value without relying on new customer acquisition?
 
 **The Solution (Data-Driven Association Rules):**
-This project executes a comprehensive Market Basket Analysis to discover exactly which products are organically purchased together. Instead of relying on guesswork, this analytical framework uses advanced SQL to extract hard patterns from millions of rows. For example, if the data reveals that 75% of users who buy "Organic Strawberries" also buy "Almond Milk," this analysis provides the exact business rules needed by the product and marketing teams to deploy targeted, frictionless recommendations
+This project executes a comprehensive Market Basket Analysis to discover exactly which products are organically purchased together. Instead of relying on guesswork, this analytical framework uses advanced SQL to extract hard patterns from millions of rows. For example, if the data reveals that 75% of users who buy "Organic Strawberries" also buy "Almond Milk," this analysis provides the exact business rules needed by the product and marketing teams to deploy targeted, frictionless recommendations.
 
 **Real-World Business Impact:**
 *   **"Frequently Bought Together" UI Feature:** By mapping item associations, the app can trigger high-conversion pop-ups. If a user adds 'Tortilla Chips' to their cart, the app instantly suggests 'Salsa Dip'. The user adds it to their cart effortlessly, generating instant profit.
@@ -26,7 +26,20 @@ This project executes a comprehensive Market Basket Analysis to discover exactly
 *   **App UI Optimization:** Insights from this analysis allow the product team to restructure the app's digital aisles, grouping highly correlated product categories together to smooth the customer journey and encourage broader catalogue browsing.
 
 ---
-<!-- (Steps 3, 4, 5, and 6 will go here: ELT Architecture, SQL Logic Snippets, Dashboard Screenshots, and Business Impact) -->
+
+## ⚙️ Core Analytical Execution & SQL Logic
+
+To translate the business objectives into actionable data, I engineered a 6-pillar analytical framework executed via complex SQL and dbt transformations:
+
+1. **Identifying "Anchor" Products (The Cart Drivers):** Calculated order volume and Average Basket Size to identify high-volume staples that drive platform traffic.
+2. **Mapping the Top 50 "Frequently Bought Together" Pairs:** Utilized advanced SQL `SELF JOINs` to identify exact item-to-item relationships that happen consistently, directly powering the UI recommendation logic.
+3. **Determining "Directional Pull" (Lead vs. Follow):** Calculated conditional probability to determine if discounting a specific lead item organically drives the sale of its paired counterpart.
+4. **Isolating "Impulse Buys" vs. "Habitual Reorders":** Cross-referenced top product pairs with reorder flags to calculate the Reorder Ratio, isolating habitual purchases for targeted "Subscribe & Save" campaigns.
+5. **Demographic-Based Bundling:** Joined transaction data with household demographics to design specific product bundles tailored uniquely to high-income versus budget shoppers.
+6. **Analyzing The Discount Trap & Halo Effect:** Evaluated promotional data to reveal if customers buying discounted items also purchased full-priced items, validating the true profitability of marketing promotions.
+
+---
+<!-- (Steps 3 and 5 will go here: ELT Architecture Flowchart, SQL Logic Snippets, and Dashboard Screenshots) -->
 ---
 
 ## 📂 Data Sourcing & Simulation
