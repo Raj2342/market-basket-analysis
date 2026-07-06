@@ -32,7 +32,7 @@ This project executes a comprehensive Market Basket Analysis to discover exactly
 To translate the business objectives into actionable data, I engineered a 6-pillar analytical framework executed via complex SQL and dbt transformations:
 
 1. **Identifying "Anchor" Products (The Cart Drivers):** Calculated order volume and Average Basket Size to identify high-volume staples that drive platform traffic.
-2. **Mapping the Top 50 "Frequently Bought Together" Pairs:** Utilized advanced SQL `SELF JOINs` to identify exact item-to-item relationships that happen consistently, directly powering the UI recommendation logic.
+2. **Mapping the Top 10 "Frequently Bought Together" Pairs:** Utilized advanced SQL `SELF JOINs` to identify exact item-to-item relationships that happen consistently, directly powering the UI recommendation logic.
 3. **Determining "Directional Pull" (Lead vs. Follow):** Calculated conditional probability to determine if discounting a specific lead item organically drives the sale of its paired counterpart.
 4. **Isolating "Impulse Buys" vs. "Habitual Reorders":** Cross-referenced top product pairs with reorder flags to calculate the Reorder Ratio, isolating habitual purchases for targeted "Subscribe & Save" campaigns.
 5. **Demographic-Based Bundling:** Joined transaction data with household demographics to design specific product bundles tailored uniquely to high-income versus budget shoppers.
