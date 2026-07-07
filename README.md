@@ -46,8 +46,24 @@ To translate the business objectives into actionable data, I engineered a 6-pill
 ### Automated Data Ingestion & Transformation
 <img width="2295" height="1471" alt="deno drawio" src="https://github.com/user-attachments/assets/3ae4b51e-f8c7-40fc-a75c-32ee26390645" />
 
+---
+### 📂 Raw Data Sourcing & Scale
+
+The pipeline ingests and processes the following raw datasets to simulate a high-volume enterprise environment:
+
+| Table Name | Total Rows |
+| :--- | :--- |
+| `RAW_TRANSACTION_DATA` | 2.6M |
+| `RAW_PRODUCT` | 92.4K |
+| `RAW_HH_DEMOGRAPHIC` | 801 |
+<img width="1916" height="861" alt="image" src="https://github.com/user-attachments/assets/28e684cd-b919-4928-8b72-4a84958a0f31" />
 
 ---
+## dbt Data Lineage & Transformation DAG
+<img width="832" height="896" alt="broraj-Page-3 drawio" src="https://github.com/user-attachments/assets/670a88be-9b47-45fd-aad1-8b4c0086606e" />
+
+
+
 
 ## 📂 Data Sourcing & Simulation
 To ensure strict adherence to data privacy standards and completely separate this independent case study from any professional work experience, the raw transactional and demographic data powering this architecture is a synthetically scaled version of a public dataset: [Dunnhumby - The Complete Journey](https://www.kaggle.com/datasets/frtgnn/dunnhumby-the-complete-journey/data)[cite: 2]. 
