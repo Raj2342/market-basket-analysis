@@ -40,9 +40,10 @@ To translate the business objectives into actionable data, I engineered a 6-pill
 
 ---
 ##  ELT Architecture and Data flow
-# Security & Trust Setup
+### Security & Trust Setup
 <img width="501" height="451" alt="deno2 drawio" src="https://github.com/user-attachments/assets/dce9834d-2c51-4051-b279-a45b76d1a7fa" />
-# Automated Data Ingestion & Transformation
+
+### Automated Data Ingestion & Transformation
 <img width="2295" height="1471" alt="deno drawio" src="https://github.com/user-attachments/assets/3ae4b51e-f8c7-40fc-a75c-32ee26390645" />
 
 
