@@ -96,6 +96,37 @@ DBT_INSTACART_BASKET_INSIGHTS/
 └── README.md                               # Project documentation (You are here)
 ```
 ---
+### 🧠 Core Engineering Logic: Conditional Probability Engine (Demo Snippet)
+
+*📌 Note: The snippet below is a demonstration highlighting the core logic. The complete dbt models within this repository heavily utilize advanced SQL techniques including complex `CTEs`, optimized `SELF JOINS`, dynamic `CASE` statements, and analytical `WINDOW` functions to execute data science workloads directly within Snowflake.*
+
+The true value of this Market Basket Analysis lies in identifying the "Directional Pull" between products. Below is the logic snippet that dynamically calculates which item in a frequent pair is the 'Lead' (the organic traffic driver) and which is the 'Follower' (the dependent impulse buy) based on conversion percentages.
+
+```sql
+-- Snippet from: models/marts/fct_directional_pull.sql
+
+SELECT 
+    pv.Item_A,
+    pv.Item_B,
+    -- Calculates conversion pull: If Item A drives B's sales stronger than B drives A's sales, Item A is the Lead.
+    CASE 
+        WHEN (pv.Times_Bought_Together * 100.0 / cv_A.Total_Trips) > (pv.Times_Bought_Together * 100.0 / cv_B.Total_Trips) THEN pv.Item_B
+        WHEN (pv.Times_Bought_Together * 100.0 / cv_B.Total_Trips) > (pv.Times_Bought_Together * 100.0 / cv_A.Total_Trips) THEN pv.Item_A
+        ELSE 'Equal Pull' 
+    END AS Lead_Item,
+    
+    -- The item with the higher dependency percentage is assigned as the Follower (Target for cross-sell UI pop-ups).
+    CASE 
+        WHEN (pv.Times_Bought_Together * 100.0 / cv_A.Total_Trips) > (pv.Times_Bought_Together * 100.0 / cv_B.Total_Trips) THEN pv.Item_A
+        WHEN (pv.Times_Bought_Together * 100.0 / cv_B.Total_Trips) > (pv.Times_Bought_Together * 100.0 / cv_A.Total_Trips) THEN pv.Item_B
+        ELSE 'Equal Pull' 
+    END AS Follower_Item
+
+FROM Pair_Volume pv
+JOIN Category_Volume cv_A ON pv.Item_A = cv_A.COMMODITY_DESC
+JOIN Category_Volume cv_B ON pv.Item_B = cv_B.COMMODITY_DESC;
+```
+--- 
 
 ## 📂 Data Sourcing & Simulation
 To ensure strict adherence to data privacy standards and completely separate this independent case study from any professional work experience, the raw transactional and demographic data powering this architecture is a synthetically scaled version of a public dataset: [Dunnhumby - The Complete Journey](https://www.kaggle.com/datasets/frtgnn/dunnhumby-the-complete-journey/data)[cite: 2]. 
