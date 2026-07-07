@@ -127,6 +127,17 @@ JOIN Category_Volume cv_A ON pv.Item_A = cv_A.COMMODITY_DESC
 JOIN Category_Volume cv_B ON pv.Item_B = cv_B.COMMODITY_DESC;
 ```
 --- 
+### 📈 Final Deliverable: Business Intelligence & Actionable Insights
+<img width="1920" height="1080" alt="Screenshot (32)" src="https://github.com/user-attachments/assets/f6c79422-8a7f-461d-b846-e12bbd804b0d" />
+<img width="1700" height="604" alt="Screenshot 2026-07-07 213047" src="https://github.com/user-attachments/assets/3edb2143-a25e-4c2f-a551-9060736bdf0f" />
+<img width="1920" height="1080" alt="Screenshot (31)" src="https://github.com/user-attachments/assets/3251390e-642a-4504-8e82-0454f5d9fd0d" />
+<img width="1920" height="1080" alt="Screenshot (33)" src="https://github.com/user-attachments/assets/4adfb36f-bd4d-4bda-a7a1-80be51adc89f" />
+<img width="1115" height="713" alt="hb" src="https://github.com/user-attachments/assets/91d01615-0c0d-4f32-bc3a-9a15ab0c89c7" />
+
+
+
+
+
 
 ## 📂 Data Sourcing & Simulation
 To ensure strict adherence to data privacy standards and completely separate this independent case study from any professional work experience, the raw transactional and demographic data powering this architecture is a synthetically scaled version of a public dataset: [Dunnhumby - The Complete Journey](https://www.kaggle.com/datasets/frtgnn/dunnhumby-the-complete-journey/data)[cite: 2]. 
