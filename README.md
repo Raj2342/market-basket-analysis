@@ -94,7 +94,8 @@ DBT_INSTACART_BASKET_INSIGHTS/
 ├── .gitignore                              
 ├── cammand.txt                             # Stored execution commands (e.g., dbt run, dbt test)
 └── README.md                               # Project documentation (You are here)
-
+```
+---
 
 ## 📂 Data Sourcing & Simulation
 To ensure strict adherence to data privacy standards and completely separate this independent case study from any professional work experience, the raw transactional and demographic data powering this architecture is a synthetically scaled version of a public dataset: [Dunnhumby - The Complete Journey](https://www.kaggle.com/datasets/frtgnn/dunnhumby-the-complete-journey/data)[cite: 2]. 
