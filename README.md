@@ -134,7 +134,8 @@ JOIN Category_Volume cv_B ON pv.Item_B = cv_B.COMMODITY_DESC;
 <img width="1920" height="1080" alt="Screenshot (33)" src="https://github.com/user-attachments/assets/4adfb36f-bd4d-4bda-a7a1-80be51adc89f" />
 <img width="1115" height="713" alt="hb" src="https://github.com/user-attachments/assets/91d01615-0c0d-4f32-bc3a-9a15ab0c89c7" />
 
-
+---
+### 💸 Business Impact: Translating Data into Revenue
 
 
 
