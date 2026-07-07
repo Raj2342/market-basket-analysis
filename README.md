@@ -62,7 +62,38 @@ The pipeline ingests and processes the following raw datasets to simulate a high
 ## dbt Data Lineage & Transformation DAG
 <img width="832" height="896" alt="broraj-Page-3 drawio" src="https://github.com/user-attachments/assets/670a88be-9b47-45fd-aad1-8b4c0086606e" />
 
+### 📂 Repository Structure & SQL Models
 
+To maintain enterprise-grade code hygiene and modularity, the entire data transformation layer is built using dbt Core. Below is the directory structure detailing the staging, analytical marts, and configuration files.
+
+*Note: Navigate directly into the `models/marts/` directory to review the complex `SELF JOIN` logic and conditional probability calculations powering the Market Basket engine.*
+
+```text
+DBT_INSTACART_BASKET_INSIGHTS/
+├── models/
+│   ├── staging/                            # Raw data standardization & type casting
+│   │   ├── stg_demographics.sql
+│   │   ├── stg_products.sql
+│   │   └── stg_transactions.sql
+│   ├── marts/                              # Core business logic & star schema models
+│   │   ├── dim_demographics.sql
+│   │   ├── dim_products.sql
+│   │   ├── dim_time_periods.sql
+│   │   ├── fct_basket_anchors.sql
+│   │   ├── fct_customer_habits.sql
+│   │   ├── fct_directional_pull.sql
+│   │   ├── fct_discount_impact.sql
+│   │   ├── fct_market_basket_demographics.sql
+│   │   ├── fct_market_basket_pairs.sql
+│   │   └── fct_weekly_pair_habits.sql
+│   └── source.yml                          # Source definitions mapped to Snowflake raw tables
+├── logs/
+│   └── dbt.log                             # Execution logs for debugging
+├── target/                                 # Compiled SQL (generated post dbt run)
+├── dbt_project.yml                         # Main dbt project configuration and materialization rules
+├── .gitignore                              
+├── cammand.txt                             # Stored execution commands (e.g., dbt run, dbt test)
+└── README.md                               # Project documentation (You are here)
 
 
 ## 📂 Data Sourcing & Simulation
