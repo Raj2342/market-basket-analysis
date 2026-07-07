@@ -39,7 +39,13 @@ To translate the business objectives into actionable data, I engineered a 6-pill
 6. **Analyzing The Discount Trap & Halo Effect:** Evaluated promotional data to reveal if customers buying discounted items also purchased full-priced items, validating the true profitability of marketing promotions.
 
 ---
-<!-- (Steps 3 and 5 will go here: ELT Architecture Flowchart, SQL Logic Snippets, and Dashboard Screenshots) -->
+##  ELT Architecture and Data flow
+# Security & Trust Setup
+<img width="501" height="451" alt="deno2 drawio" src="https://github.com/user-attachments/assets/dce9834d-2c51-4051-b279-a45b76d1a7fa" />
+# Automated Data Ingestion & Transformation
+<img width="2295" height="1471" alt="deno drawio" src="https://github.com/user-attachments/assets/3ae4b51e-f8c7-40fc-a75c-32ee26390645" />
+
+
 ---
 
 ## 📂 Data Sourcing & Simulation
