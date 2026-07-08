@@ -126,6 +126,12 @@ FROM Pair_Volume pv
 JOIN Category_Volume cv_A ON pv.Item_A = cv_A.COMMODITY_DESC
 JOIN Category_Volume cv_B ON pv.Item_B = cv_B.COMMODITY_DESC;
 ```
+---
+### data mkodeling 
+<img width="795" height="491" alt="page 1 data model" src="https://github.com/user-attachments/assets/a0105d96-c8b3-4573-a5c3-0fc812fb9b6e" />
+<img width="787" height="371" alt="page2 data model" src="https://github.com/user-attachments/assets/f7aa97ac-d5bf-4255-9c20-8ea341a4f867" />
+<img width="683" height="310" alt="page 3 data model" src="https://github.com/user-attachments/assets/dcff056e-baf6-47b9-9868-55f86d15287e" />
+
 --- 
 ### 📈 Final Deliverable: Business Intelligence & Actionable Insights 
 Tableau  dashbord link : https://public.tableau.com/views/OmniMart_Command_Center_Final/Home?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link 
