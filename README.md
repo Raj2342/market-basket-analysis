@@ -144,7 +144,7 @@ Tableau  dashbord link : https://public.tableau.com/views/OmniMart_Command_Cente
 ---
 ### 💸 Business Impact: Translating Data into Revenue
 
-
+open final_report folder 
 
 
 ## 📂 Data Sourcing & Simulation
